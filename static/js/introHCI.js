@@ -13,11 +13,15 @@ function initializePage() {
 		$('.jumbotron h1').text("Javascript is connected");
 	});
 function projectClick(e) { 
+	console.log("Project Clicked")
     // prevent the page from reloading      
     e.preventDefault();
     // In an event handler, $(this) refers to      
     // the object that triggered the event      
     $(this).css("background-color", "red");
+    var projectTile = $(this).find("p").text();
+    var jumbotronHeader = $(".jumbotron h1");
+    jumbotronHeader.text(projectTile);
 }
 
 	// Add any additional listeners here
